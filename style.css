@@ -1,0 +1,39 @@
+/* Menu */
+#menu {
+    display: none;
+}
+#menu a {
+    display: block;
+}
+
+/* Menu icon */
+#menu-icon-label {
+    float: right;
+}
+
+#menu-icon-checkbox {
+    display: none;
+}
+
+#menu-icon-checkbox:checked ~ #menu {
+    display: block;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    /* Menu */
+    #menu {
+        text-align: right;
+        display: block;
+        float: right;
+    }
+
+    #menu a {
+        display: inline;
+    }
+
+    /* Menu icon */
+    #menu-icon-label {
+        display: none;
+    }
+}
