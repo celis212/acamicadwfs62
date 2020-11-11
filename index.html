@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>Document</title>
+    <title>Mi primera pagina</title>
+    <style>
+        body{background-color: darkgrey;}
+        h1{color: red;}
+        h6{padding-left: 20px;}
+        p{background-color: black; color:white}
+    </style>
 </head>
 <body>
+    <h1 id="nombre">Cesar Augusto Celis Marin</h1>
+    <h6 id="fecha_nacimiento">17/10/1987</h6>
+    <p id="description">Me llamo Cesar Augusto Celis tengo 32 años y vivo en la ciudad de Medellin Colombia</p>
+    <script>
+        nombre = document.getElementById('nombre');
+        nombre.addEventListener("click", function(){ 
+            alert("Bienvenido a mi sitio Web")
+        });
     
+        descripcion = document.getElementById('description');
+        descripcion.addEventListener("mouseenter", function(){
+            descripcion.style.color = "black";
+            descripcion.style.backgroundColor = "white";
+        });
+    
+        descripcion.addEventListener("mouseout", function(){
+            descripcion.style.color = "white";
+            descripcion.style.backgroundColor = "black";
+        });
+    </script>
 </body>
 </html>
