@@ -1,0 +1,122 @@
+  /* Link Styles */
+  *{
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    }
+
+/* Section Styles */
+
+header {
+    text-align: center;/*alineacion del elemento */
+    background: url('.//images/ACDC.jpg') no-repeat top center;
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 300px; /*margen desde la parte superior permite ver mas imagen*/
+    }
+
+header .profile-image {
+    margin-top: 40px; /*margen superior  */
+    margin-bottom: 100px;
+    width: 150px;/* ancho*/
+    height: 150px;/*alto*/
+    border-radius: 50%;/* da bordes redondos a los elementos*/
+    border: 3px solid white;/* configura el borde del elemento*/
+    transition: all .5s;/*tiempo de transicion del efecto*/
+    }
+
+
+header .profile-image:hover {
+  transform: scale(1.5) rotate(360deg);
+    } 
+
+.main-nav {
+    width: 100%;
+    background: red;
+    min-height: 30px;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    }
+.nav {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    }
+
+.nav li {
+    padding: 5px 10px 10px 10px;
+    
+    }
+
+.nav a {
+    transition: all .5s;
+    }
+  
+/*pictures*/
+
+.picture{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.concert{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+/*history*/
+.view{
+    text-align: justify;
+}
+
+footer {
+    width: 100%;
+    min-height: 30px;
+    padding: 20px 0 40px 20px;
+    }
+
+footer ul {
+    list-style-type: none;
+    margin-top: 100px;
+    padding: 0;
+    text-align: center;
+    }
+
+footer ul li {
+    display: inline-block;
+    }
+
+footer .copyright {
+    top: -8px;
+    margin-right: -10px;
+    font-size: .75em;
+    text-align: center;
+    }
+      
+a.social {
+    display: inline-block;
+    text-indent: -9999px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    opacity: .5;
+    transition: all .25s;
+    }
+        
+a.twitter {
+    background-image: url(../Codigo/images/twitter.svg);
+    }
+a.linkedin {
+    background-image: url(../Codigo/images/linkedin.svg);
+    }
+a.facebook{
+    background-image: url(../Codigo/images/facebook.svg);
+    }
