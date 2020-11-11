@@ -1,0 +1,40 @@
+div {
+    border: 1px solid red;
+  }
+  
+  #none{
+    display: none;
+  }
+  
+  .block{
+    display: block;
+    background-color: yellow;
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+    margin: 20px;
+  }
+  
+  .inline{
+    display: inline;
+    background-color: yellow;
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+    margin: 20px;
+  }
+  
+  
+  .inline_block{
+    display: inline-block;
+    background-color: yellow;
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+    margin: 20px;
+  }
+  
+  
