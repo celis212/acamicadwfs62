@@ -7,6 +7,93 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Registration Form ACAMICA</h1>
+    <form action="example.html">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div>
+                <label for="user_name">Firts name:</label>
+                <input type="text" id="user_name" name="user_name" placeholder="Ariel" tabindex="1" autofocus required /><br>
+                <br>
+                <label for="last_name" >Last Name:</label>
+                <input type="text" id="last_name" name="user_name" placeholder="Calzada" tabindex="2" required /><br>
+                <br>
+                <label for="mail">E'mail:</label>
+                <input type="email" id="mail" name="mail" placeholder="ariel@acamica.com" tabindex="3" required /><br>
+                <br>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="0000000000" tabindex="4" pattern="[0-9]{10}" required />
+            </div>
+            <div>
+                <br>
+                <label for="country">Country</label>
+                <select id="country" name="country" tabindex="5">
+                    <!-- <option value="OO">Choose one</option> -->
+                    <option value="AR">Argentina</option>
+                    <option value="BR">Brasil</option>
+                    <option value="CH">Chile</option>
+                    <option value="CO">Colombia</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="CU">Cuba</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="SA">El Salvado</option>
+                    <option value="GU">Guatemala</option>
+                    <option value="HA">Haití</option>
+                    <option value="HO">Honduras</option>
+                    <option value="MX">México</option>
+                </select>
+            </div>           
+            <div>
+                <p>do you work right now?</p>
+                <input type="radio" id="yesWork" name="work" tabindex="6" value="yesWork">
+                <label for="yesWork">Yes</label>
+                <input type="radio" id="noWork" name="noWork" tabindex="6" value="noWork">
+                <label for="noWork">No</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Career Information</legend>
+            <div>
+                <br>
+                <label for="career">What career do you want?</label>
+                <select id="career" name="career" tabindex="7">
+                    <!-- <option value="OO">Choose one</option> -->
+                    <option value="data">Data Science</option>
+                    <option value="web">Desarrollo Web Full Stack</option>
+                    <option value="frontend">FrontEnd Avanzado</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <label for="modality">What learning style do you prefer?</label>
+                <select id="modality" name="modality" tabindex="8">
+                    <option value="online">Online</option>
+                    <option value="presential">Presential</option>
+                </select>
+            </div>
+            <div>
+                <h3>Description of you</h3>
+                <textarea
+                tabindex="9"
+                name="comment"
+                id="comment"
+                cols="100"
+                rows="10"
+                placeholder="Enter a short description"
+                maxlength="300"
+                ></textarea>
+            </div>
+        </fieldset>
+        <div>
+            <br>
+            <input type="checkbox"  name="terms" id="terms" tabindex="10" required />
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+        <div>
+            <br>
+            <input type="submit" />
+            <input type="reset">
+        </div>
+    </form>
 </body>
 </html>
