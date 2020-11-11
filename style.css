@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #FB4D3D;
+}
+
+.contenedor{
+    float: fixed;
+    top: 0;
+    left: 0;
+    background: #03CEA4;
+    position: fixed;
+    height: 800px;
+    width: 800px;
+    border: 5px solid #8C2D7E;
+}
+
+.block{
+    height: 300px;
+    width: 300px;
+    border: 3px  solid;
+    color: #746785;
+    font-size: 38px;
+    text-align: center;
+}
+
+.cuadro_uno{
+    float: left;
+    background: #345995;
+}
+
+.cuadro_dos{
+    float: right;
+    background: #8F8F65;
+}
+
+.cuadro_tres{
+    position: absolute;
+    background: #EAC435;
+    left: 332px;
+    top: 485px;
+
+}
+
+.cuadro_cuatro{
+    position: absolute;
+    background: #D5B230;
+    font-size: 16px;
+    height: 143px;
+    width: 143px;
+    left: 650px;
+    top: 650px;
+}
