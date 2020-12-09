@@ -1,0 +1,31 @@
+@media screen and (max-width: 1220px) {
+  .foto {
+    width: 10vw; } }
+@media screen and (max-width: 768px) {
+  .foto {
+    width: 45vw; } }
+@media screen and (max-width: 320px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+  .foto {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+* {
+  border: 2px solid #000000;
+  margin: 0;
+  padding: 0; }
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */
