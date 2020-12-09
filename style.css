@@ -1,0 +1,143 @@
+@keyframes rotate {
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+*{
+    margin:0;
+    padding: 0;
+    /* border: 5px solid #0000ff; */
+}
+
+
+
+.center{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #000000;
+    background-color: #000000;
+    border-radius: 50%;
+    height: 0.1px;
+    width: 0.1px;
+}
+
+.outside{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #000000;
+    border-radius: 50%;
+    height: 600px;
+    width: 600px;
+}
+
+/* .hours_second, .hours_minutes, .hours_hour{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.hours_second{
+    position: absolute;
+    top: -100%;
+    left: calc(50% - 1px);
+    height: 240px;
+    width: 2px;
+    transform-origin: bottom;
+    background-color: #ff0000;
+    animation: rotate 60s infinite steps(60);
+    z-index: 6666;
+}
+
+.hours_minutes{
+    position: absolute;
+    left: calc(50% - 2px);
+    height: 260px;
+    width: 4px;
+    transform-origin: bottom;
+    background-color: #000875;
+    animation: rotate 3600s infinite steps(60);
+}
+
+.hours_hour{
+    position: absolute;
+    left: calc(50% - 3px);
+    height: 180px;
+    width: 6px;
+    transform-origin: bottom;
+    background-color: #1fb900;
+    animation: rotate 43200s infinite linear;
+}
+
+.clock{
+    font-size: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.twelve{
+    top: -260px;
+    left: 0px;
+}
+
+.one{
+    top: -225.17px;
+    left: 130px;
+}
+
+.two{
+    top: -130px;
+    left: 225.17px;
+}
+
+.three{
+    top: px;
+    left: 260px;
+}
+
+.four{
+    top: 130px;
+    left: 225.17px;
+}
+
+.five{
+    top: 225.17px;
+    left: 130px;
+}
+
+.six{
+    top: 260px;
+    left: px;
+}
+
+.seven{
+    top: 225.17px;
+    left: -130px;
+}
+
+.eigth{
+    top: 130px;
+    left: -225.17px;
+}
+
+.nine{
+    top: px;
+    left: -260px;
+}
+
+.ten{
+    top: -130px;
+    left: -225.17px;
+}
+
+.eleven{
+    top: -225.17px;
+    left: -130px;
+}
+
+
