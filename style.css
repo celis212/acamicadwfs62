@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  border: 2px solid #000000; }
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: #f7f5f0;
+  border: 2px solid #000000;
+  text-decoration: none; }
+
+.imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  border: 2px solid #000000;
+  height: 200px; }
+
+.link {
+  display: flex;
+  justify-content: space-around; }
+
+main {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #000000; }
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 50px; }
+
+.text {
+  max-width: 500px;
+  text-align: left; }
+
+.formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.segunda {
+  display: flex;
+  justify-content: flex-start;
+  width: 400px; }
+
+.tercera {
+  position: relative;
+  margin-left: 30px;
+  width: 200px; }
+
+.quinta {
+  display: flex;
+  justify-content: space-between; }
+
+.visibili {
+  visibility: hidden; }
+
+.mayor {
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 2px solid #000000;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%; }
+
+.menor {
+  border: 2px solid #000000;
+  height: 20px;
+  width: 20px; }
+
+.mapa {
+  text-align: center;
+  border: 2px solid #000000;
+  height: 200px;
+  width: 200px; }
+
+/*# sourceMappingURL=style.css.map */
