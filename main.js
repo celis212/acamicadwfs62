@@ -47,3 +47,11 @@
 //     alert("debes de ingresar un modelo valido")
 // }
 
+var dial = parseInt(prompt("Ingresa el Dial de la estacion: "))
+if (dial%2!==0 && dial>=89.9 && dial<107.9) {
+    alert("esta estacion de radio si existe")
+}
+else {
+    alert("esta estacion de radio no existe intenta de nuevo")
+}
+
