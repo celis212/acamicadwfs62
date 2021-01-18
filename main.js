@@ -1,6 +1,14 @@
-// var fruits = ["manzana", "pera", "sandia", "durazno"]
+//reto
+var fruits = ["manzana", "pera", "sandia", "durazno"]
 // console.log(fruits.length)
-// for ()
+// for (let i=0; i<fruits.length; i++) {
+//     console.log(fruits[i])
+// }
+let i=0
+while (i<4) {
+    console.log(fruits[i])
+    i++
+}
 
 /*scope - var, let y const*/
 // variables locales y globales 
@@ -13,12 +21,12 @@
 // alert(var_test);
 
 
-let let_test = "hola global";
+// let let_test = "hola global";
 //con let podemos manejar ambas global y local 
-if (true) {
-    let let_test = "hola, dice let";
-}
-alert(let_test);
+// if (true) {
+//     let let_test = "hola, dice let";
+// }
+// alert(let_test);
 
 // const const_test = "hola global";
 // if (true) {
