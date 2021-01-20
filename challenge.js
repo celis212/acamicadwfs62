@@ -36,16 +36,16 @@ let personas = [
     }
   ];
 
-  count = undefined
-  console.log(personas)
+  
   function asistentes(listaPersonas) {
-      for (let i=0; i<listaPersonas.length(); i++) {
-        if (listaPersonas[i].asistente() != null) {
+    count = null
+      for (let i = 0; i < listaPersonas.length; i++) {
+        if (listaPersonas[i].asistente == true || listaPersonas[i].asistente === undefined) {
           count++
-          console.log(count)
         }
-      console.log(listaPersonas[i].asistente())
       }
+    return count
+    
     /**
      * Esta fución debe calcular el total de asistentes
      * según una lista de personas.
@@ -56,7 +56,9 @@ let personas = [
      * La función debe retornar el número de asistencias.
      */
   }
-  asistentes(personas)
+  let totalAsistentes = asistentes(personas);
+  console.log("la cantidad de asistentes fueron "+ totalAsistentes)
+  
   /**
    * La implementación debe ser:
    *
@@ -64,11 +66,86 @@ let personas = [
    * console.log(totalAsistentes); // debe ser 4
    */
 
-//   📝 2. Sobre el sandbox anterior, desarrolla una función que te permita crear un nuevo array que tenga solo las personas asistentes. Es decir, que tengan la propiedad “asistente” dentro de su objeto, y que esta sea igual a “true”.
+function filtrarPersonas(listaAsistentes) {
+  let new_person = []
+  for (let i = 0; i < listaAsistentes.length; i++) {
+    if (listaAsistentes[i].asistente == true) {
+      let car = {
+        nombre: listaAsistentes[i].nombre,
+        asistente: listaAsistentes[i].asistente,
+        seccion: listaAsistentes[i].seccion,
+        rol: listaAsistentes[i].rol,
+      }
+
+      new_person.push(car)
+    }
+
+    else if (listaAsistentes[i].asistente === undefined) {
+      let car = {
+        nombre: listaAsistentes[i].nombre,
+        seccion: listaAsistentes[i].seccion,
+        rol: listaAsistentes[i].rol,
+      }
+
+      car.asistente = true
+      new_person.push(car)
+    }
+  }
+  return new_person
+}
+let nuevaLista = filtrarPersonas(personas)
+console.log(nuevaLista)
+
+//   📝 2. Sobre el sandbox anterior, desarrolla una función que te permita crear un nuevo array que tenga 
+//solo las personas asistentes. Es decir, que tengan la propiedad “asistente” dentro de su objeto, y que esta sea igual a “true”.
+
+function filtrarPlatino(listaPlatino) {
+  let new_list_platino = []
+  for (let i = 0; i < listaPlatino.length; i++) {
+    if (listaPlatino[i].seccion == "platino" && listaPlatino[i].seccion == undefined) {
+      let car = {
+        nombre: listaPlatino[i].nombre,
+        asistente: listaPlatino[i].asistente,
+        seccion: listaPlatino[i].seccion,
+        rol: listaPlatino[i].rol,
+      }
+
+      new_list_platino.push(car)
+    }
+
+    else if (listaPlatino[i].seccion == "platino" && listaPlatino.asistente === undefined) {
+      let car = {
+        nombre: listaPlatino[i].nombre,
+        seccion: listaPlatino[i].seccion,
+        rol: listaPlatino[i].rol,
+      }
+
+      car.listaPlatino = true
+      new_list_platino.push(car)
+    }
+  }
+  return new_list_platino
+}
+let nuevaListaPlatino = filtrarPlatino(personas)
+console.log(nuevaListaPlatino)
+
 
 //   📝 3. Además, desarrolla una función que te permite crear un nuevo array que tenga solo las personas de la sección “platino”.
+
+  function mostrarPropiedad(propiedad, index) {
+    constum_list = []
+    console.log(personas[index][propiedad]);
+  }
+
+let custom_one = prompt("Que propiedad desea ver? ")
+let custom_two = prompt("con que caracteristica? ")
+let custom = mostrarPropiedad(custom_one, custom_two)
+console.log(custom)
   
-//   📝 4. Finalmente, crea una única función que cree un nuevo array según un filtro y un valor especificado, los cuales tendrán que ser pasados como argumentos a la función. Por ejemplo:
+//   📝 4. Finalmente, crea una única función que cree un nuevo array según un filtro y un valor especificado, los cuales tendrán que ser pasados como 
+//argumentos a la función. Por ejemplo:
+
+
   
 //   let speakers = filtrarPersonas(“rol”, “speaker”);
   
@@ -76,9 +153,7 @@ let personas = [
   
 
 
-// function filtrarPersonas(propiedad, valor) {
-    // desarrolla tu función aquí
-//   }
+
   
   /**
    * Puedes utilizar la notación brackets para acceder a
