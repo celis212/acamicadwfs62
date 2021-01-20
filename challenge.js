@@ -120,7 +120,7 @@ function filtrarPlatino(listaPlatino) {
         rol: listaPlatino[i].rol,
       }
 
-      car.listaPlatino = true
+      car.asistente = true
       new_list_platino.push(car)
     }
   }
@@ -132,14 +132,38 @@ console.log(nuevaListaPlatino)
 
 //   📝 3. Además, desarrolla una función que te permite crear un nuevo array que tenga solo las personas de la sección “platino”.
 
-  function mostrarPropiedad(propiedad, index) {
-    constum_list = []
-    console.log(personas[index][propiedad]);
+function mostrarPropiedad(lista, propiedad, index) {
+  let costum_list = []
+  for (let i = 0; i < lista[i]; i++) {
+    if (lista[i][propiedad] == index) {
+      let car = {
+        nombre: lista[i].nombre,
+        asistente: lista[i].asistente,
+        seccion: lista[i].seccion,
+        rol: lista[i].rol,
+      }
+
+      costum_list.push(car)
+    }
+
+    else if (lista[i][propiedad] == index && lista[i][asistente] === undefined) {
+      let car = {
+        nombre: lista[i].nombre,
+        seccion: lista[i].seccion,
+        rol: lista[i].rol,
+      }
+
+      car.asistente = true
+      costum_list.push(car)
+    }
   }
+  return costum_list
+  // console.log(personas[propiedad][index]);
+}
 
 let custom_one = prompt("Que propiedad desea ver? ")
 let custom_two = prompt("con que caracteristica? ")
-let custom = mostrarPropiedad(custom_one, custom_two)
+let custom = mostrarPropiedad(personas, custom_one, custom_two)
 console.log(custom)
   
 //   📝 4. Finalmente, crea una única función que cree un nuevo array según un filtro y un valor especificado, los cuales tendrán que ser pasados como 
@@ -149,7 +173,8 @@ console.log(custom)
   
 //   let speakers = filtrarPersonas(“rol”, “speaker”);
   
-//   Lo anterior deberá retornar un nuevo array solo con los objetos donde la propiedad “rol” sea igual a “speaker. Encuentra unos tipos en [este sandbox]
+//   Lo anterior deberá retornar un nuevo array solo con los objetos donde la propiedad “rol” sea igual a “speaker.
+//  Encuentra unos tipos en [este sandbox]
   
 
 
