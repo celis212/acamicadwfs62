@@ -134,31 +134,17 @@ console.log(nuevaListaPlatino)
 
 function mostrarPropiedad(lista, propiedad, index) {
   let costum_list = []
-  for (let i = 0; i < lista[i]; i++) {
-    if (lista[i][propiedad] == index) {
-      let car = {
-        nombre: lista[i].nombre,
-        asistente: lista[i].asistente,
-        seccion: lista[i].seccion,
-        rol: lista[i].rol,
-      }
-
-      costum_list.push(car)
+  for (let i = 0; i < lista.length; i++) {
+    if (lista[i][propiedad] === index) {
+      costum_list.push(lista[i])
     }
 
-    else if (lista[i][propiedad] == index && lista[i][asistente] === undefined) {
-      let car = {
-        nombre: lista[i].nombre,
-        seccion: lista[i].seccion,
-        rol: lista[i].rol,
-      }
-
-      car.asistente = true
-      costum_list.push(car)
+    else if (lista[i][propiedad] === index && lista[i][asistente] === undefined) {
+      lista[i].asistente = true
+      costum_list.push(lista[i])
     }
   }
   return costum_list
-  // console.log(personas[propiedad][index]);
 }
 
 let custom_one = prompt("Que propiedad desea ver? ")
@@ -168,43 +154,3 @@ console.log(custom)
   
 //   📝 4. Finalmente, crea una única función que cree un nuevo array según un filtro y un valor especificado, los cuales tendrán que ser pasados como 
 //argumentos a la función. Por ejemplo:
-
-
-  
-//   let speakers = filtrarPersonas(“rol”, “speaker”);
-  
-//   Lo anterior deberá retornar un nuevo array solo con los objetos donde la propiedad “rol” sea igual a “speaker.
-//  Encuentra unos tipos en [este sandbox]
-  
-
-
-
-  
-  /**
-   * Puedes utilizar la notación brackets para acceder a
-   * las propiedades de un objeto, por ejemplo:
-   */
-  
-//   console.log("ACCEDIENDO A PROPIEDADES DE FORMA MANUAL");
-//   console.log("---------------------------------------------");
-//   console.log(personas[0]["nombre"]);
-//   console.log(personas[1]["rol"]);
-//   console.log(personas[2]["asistente"]);
-//   console.log(personas[3]["seccion"]);
-  
-  /**
-   * Podemos parametrizar el tipo de propiedad que queremos leer
-   * dentro de una función, de la siguiente forma:
-   *
-   */
-  
-//   function mostrarPropiedad(propiedad, index) {
-//     console.log(personas[index][propiedad]);
-//   }
-  
-//   console.log("ACCEDIENDO A PROPIEDADES DE FORMA AUTOMÁTICA");
-//   console.log("---------------------------------------------");
-//   mostrarPropiedad("rol", 1);
-//   mostrarPropiedad("nombre", 3);
-//   mostrarPropiedad("rol", 0);
-  
