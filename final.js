@@ -1,8 +1,6 @@
-
-
 class Perros {
     constructor (nombre, raza, edad, estado) {
-        let opcion = parseInt(estado)
+        const opcion = parseInt(estado)
         if (opcion <= 3 && typeof(opcion) === 'number') {
             this.nombre = nombre
             this.raza = raza
@@ -36,47 +34,66 @@ class Perros {
     }
 }
 
-let listaPerros = []
 
+let listaPerros = []
 
 while (true){
     const desition = () => {
-        actionUser = prompt("que accion desea realizar?: \n A. ingresar una mascota \n B. ver todos los perros \n C. ver los perros en adopcion \n D. ver los perros en proceso de adopcion \n E.ver los perros adoptados")
+        const actionUser = prompt("que accion desea realizar?: \n A. ingresar una mascota \n B. ver todos los perros \n C. ver los perros en adopcion \n D. ver los perros en proceso de adopcion \n E.ver los perros adoptados")
         return actionUser
     } 
 
     const newDog = () => {
-        let dog = new Perros(`${prompt("Nombre")}`, `${prompt("Raza")}`, `${prompt("Edad")}`, `${prompt("Estado")}`)
+        const dog = new Perros(`${prompt("Nombre")}`, `${prompt("Raza")}`, `${prompt("Edad")}`, `${prompt("Estado")}`)
         return listaPerros.push(dog)
     }
 
     let desicion = desition()
 
-    if (desicion.toLowerCase == "a") {
-        newDog()  
-        if (window.confirm("desea gregar otro perro?")) {
+    if (desicion == 'a') {
+        newDog()
+        if (window.confirm('Desea ingresar un nuevo perro')) {
             newDog()
         }
         else {
-            desition()
+            continue
         }
     }
-
-    else if (desicion.toLowerCase == "b") {
+    
+    else if (desicion = "b") {
         console.log(listaPerros)
         if (window.confirm("desea continuar?")) {
-            desition()
+            continue
         }
         else {
             window.open("exit.html", "Thanks for Visiting!");
         }
     }
 
-    else {
-        alert("ingrese un valor correcto")
-        desition()
+    else if (desicion = "c") {
+        // let perrosFiltrados = []
+        // for (let i = 0; i<listaPerros.length; i++) {
+        //     const item = listaPerros[i]
+        //     if (item[estado] === "En Adopcion") {
+        //         perrosFiltrados.push(item)
+        //     }
+        // }
+        const perrosFiltrado = listaPerros.map((element) => {
+            const item = element
+            if (item[estado] === "En Adopcion") {
+                return item
+            }
+        })
+        console.log(perrosFiltrado)
     }
+
+
 }
+    // else {
+    //     alert("ingrese un valor correcto")
+    //     desition()
+    // }
+
 
 
 
