@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.mb {
+  margin-bottom: 80px;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #b5b4b4;
+}
+.nav-bar .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav-bar .nav-list a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #6b6b6b;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #b5b4b4;
+}
+.nav-bar .nav-list a:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+.nav-bar .nav-list a:hover {
+  text-decoration: underline;
+}
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: fill;
+      flex-basis: fill;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.heading .text, .heading .heading-image {
+  width: 50%;
+}
+.heading .text p, .heading .heading-image p {
+  line-height: 1.5;
+}
+.heading .text h1, .heading .heading-image h1 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-size: 2.6rem;
+}
+.heading .heading-image {
+  text-align: right;
+}
+.heading .heading-image img {
+  border-radius: 20px;
+}
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 30px;
+}
+.images .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+.images .image img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.images .image p {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.btn-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.btn-container .btn {
+  text-transform: uppercase;
+  padding: 20px 150px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #c4c4c4;
+}
+.btn-container .btn:hover {
+  cursor: pointer;
+  background-color: #9b9b9b;
+  color: #fff;
+}
+.btn-container .btn:active {
+  background-color: #6d6d6d;
+}
