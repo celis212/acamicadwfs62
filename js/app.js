@@ -14,3 +14,11 @@
 // console.log(nodeElement)
 // let textToArray = Array.from(nodeElement)
 // console.log(textToArray)
+
+let logotipo = document.getElementById("logo")
+logotipo.addEventListener('mouseover', () => {
+    logotipo.classList.add('logoconborde')
+})
+logotipo.addEventListener('mouseout', () => {
+    logotipo.classList.remove('logoconborde')
+})
