@@ -1,3 +1,11 @@
+let saludar = nombre => "hola " + nombre
+saludar("Josefina")
+
+//operador ternario
+let name = "Josefina"
+let full_name = (isNaN(name))? console.log("hola " + name) : "ingrese un valor nuevo"
+//informacion dada en la bitacora
+
 class Aviones {
     acelerar(){
 		this.velocidad = (isNaN(this.velocidad))?  this.aceleracion : this.velocidad + this.aceleracion;
