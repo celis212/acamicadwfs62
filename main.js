@@ -5,7 +5,7 @@ function double(a) {
 
 //arrow function
 // se le puede eliminar la palabra function
-const doubleTwo (a) => {
+const doubleTwo(a) => {
     return a * 2
 }
 
