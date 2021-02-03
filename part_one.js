@@ -12,10 +12,7 @@
 
 class Persona {
     constructor (nombre, apellido, edad) {
-      if (
-        isNaN(parseInt(edad)) ||
-        nombre.length < 4
-      ) {
+      if ( isNaN(parseInt(edad)) || nombre.length < 4) {
         console.log("No se pudo registrar la persona. Datos invalidos")
       } else {
         this.nombre = nombre.toString()
@@ -46,6 +43,6 @@ class Persona {
   personas.push(jose)
   personas.push(luis)
   
-  for (let i = 0; i < personas.length; i++) {
-    console.log(personas[i].fullname())
-  }
+  personas.forEach((persona) => {
+    console.log(persona.fullname())
+  })
