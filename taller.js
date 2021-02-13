@@ -2,7 +2,7 @@
 
 Toma de manera aleatoria 3 elementos.
 
-Lanza 3 fetch al mismo Endpoint de Pokemon y muestra solamente la primera respuesta.
+A.  Lanza 3 fetch al mismo Endpoint de Pokemon y muestra solamente la primera respuesta.
 Cambia uno de los elementos de tu array a un valor tipo string.
 
 Repite el proceso: toma de manera aleatoria 3 elementos.
@@ -11,22 +11,46 @@ Lanza 3 fetch al mismo Endpoint de Pokemon y muestra los siguientes resultados:
 Si los 3 request finalizaron correctamente, muestra los resultados por pantalla.
 Si algún request falló (te tocó el valor string en la elección aleatoria), muestra un error por pantalla.*/
 
-let promiseList = []
-let listNumbers = [1,2,3,4,5,6,'uno',8,9,10]
+// let promiseList = []
+let listNumbers = [1,2,3,4,5,6,7,8,9,10]
+
 const randomUno = Math.round(Math.random() * 9)
 const randomDos = Math.round(Math.random() * 9)
 const randomTres = Math.round(Math.random() * 9)
+
 const listNumberRandom = [
     listNumbers[randomUno], 
     listNumbers[randomDos], 
     listNumbers[randomTres]
 ]
-listNumberRandom.forEach( number => {
-    const fetchList = fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
+
+// listNumberRandom.forEach( number => {
+//     const fetchList = fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
+//     .then(response => response.json())
+//     promiseList.push(fetchList)
+// })
+
+// A
+const pokemonUno = new Promise((resolve, reject) =>{
+  resolve(setTimeout(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/3`)
     .then(response => response.json())
-    promiseList.push(fetchList)
+  } , 100))
 })
 
+const pokemonDos = new Promise((resolve, reject) =>{
+  resolve(setTimeout(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/2`)
+    .then(response => response.json())
+  } , 200))
+})
+
+const pokemonTres = new Promise((resolve, reject) =>{
+  resolve(setTimeout(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/1`)
+    .then(response => response.json())
+  } , 300))
+})
 
 const pokemonList = document.querySelector('.pokemon-list')
 const showPokemon = (name, id, picture) => {
@@ -46,16 +70,27 @@ const showPokemon = (name, id, picture) => {
   pokemonList.appendChild(pokemonCard)
 }
 
-Promise.all(promiseList)
-  .then(response => {
-    response.forEach(pokemon => {
-      const name = pokemon.name
-      console.log(pokemon)
-      const id = pokemon.id
-      const picture = pokemon.sprites.front_default
+Promise.race([pokemonUno, pokemonDos, pokemonTres])
+  // .then(response => {
+  //   response.forEach(pokemon => {
+  //     const name = pokemon.name
+  //     console.log(pokemon)
+  //     const id = pokemon.id
+  //     const picture = pokemon.sprites.front_default
+  //     showPokemon(name, id, picture)
+  //   })
+  // })
+
+//A
+  .then(
+    response =>  {
+      const name = response.name
+      console.log(response)
+      const id = response.id
+      const picture = response.sprites.front_default
       showPokemon(name, id, picture)
-    })
-  })
+    }
+  )
 
   .catch(
     response => {
