@@ -11,7 +11,7 @@ Lanza 3 fetch al mismo Endpoint de Pokemon y muestra los siguientes resultados:
 Si los 3 request finalizaron correctamente, muestra los resultados por pantalla.
 Si algún request falló (te tocó el valor string en la elección aleatoria), muestra un error por pantalla.*/
 
-// let promiseList = []
+let promiseList = []
 let listNumbers = [1,2,3,4,5,6,7,8,9,10]
 
 const randomUno = Math.round(Math.random() * 9)
@@ -32,24 +32,24 @@ const listNumberRandom = [
 
 // A
 const pokemonUno = new Promise((resolve, reject) =>{
-  resolve(setTimeout(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/3`)
+  resolve(
+    fetch(`https://pokeapi.co/api/v2/pokemon/${listNumberRandom[0]}`)
     .then(response => response.json())
-  } , 100))
+  )
 })
 
 const pokemonDos = new Promise((resolve, reject) =>{
-  resolve(setTimeout(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/2`)
+  resolve(
+    fetch(`https://pokeapi.co/api/v2/pokemon/${listNumberRandom[1]}`)
     .then(response => response.json())
-  } , 200))
+  )
 })
 
 const pokemonTres = new Promise((resolve, reject) =>{
-  resolve(setTimeout(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/1`)
+  resolve(
+    fetch(`https://pokeapi.co/api/v2/pokemon/${listNumberRandom[2]}`)
     .then(response => response.json())
-  } , 300))
+  )
 })
 
 const pokemonList = document.querySelector('.pokemon-list')
@@ -85,7 +85,7 @@ Promise.race([pokemonUno, pokemonDos, pokemonTres])
   .then(
     response =>  {
       const name = response.name
-      console.log(response)
+      console.log(response.name)
       const id = response.id
       const picture = response.sprites.front_default
       showPokemon(name, id, picture)
