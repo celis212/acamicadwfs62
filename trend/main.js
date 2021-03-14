@@ -1,4 +1,4 @@
-fetch('https://api.giphy.com/v1/gifs/trending?api_key=5296N97M94Fl7EKKQrVjAuKMfDpFWk4L&limit=3')
+fetch('https://api.giphy.com/v1/gifs/trending?api_key=VoyMtUR5a3aeKmGKj01JptIltKYBlN0D')
   .then(response => response.json())
   .then(response => {
     response.data.forEach(gif => {
