@@ -1,5 +1,11 @@
 let calmodule = require('./calculadora')
 
-let calculadora = new calmodule();
+let sumar = new calmodule.CalcSum();
+let restar = new calmodule.CalcRest();
+let multiplicar = new calmodule.CalcMult();
+let dividir = new calmodule.CalcDiv();
 
-calculadora.sumar(10, 30);
+sumar.suma(10, 30);
+restar.resta(10, 30);
+multiplicar.multi(10, 30);
+dividir.div(10, 30);
