@@ -1,0 +1,23 @@
+{
+  "name": "acamicadwfs62",
+  "version": "1.0.0",
+  "description": "clase de descripcion de mpn",
+  "main": "variables.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celis212/acamicadwfs62.git"
+  },
+  "author": "cesar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celis212/acamicadwfs62/issues"
+  },
+  "homepage": "https://github.com/celis212/acamicadwfs62#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
