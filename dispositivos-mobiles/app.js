@@ -1,6 +1,6 @@
 //traemos librerias 
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express');//trae el express
+const bodyParser = require('body-parser');//
 const { request } = require('express');
 
 //configuramos el servicio 
@@ -57,7 +57,7 @@ app.post('/device', (request, response) => {
             sistema_operativo: sistema_operativo,
             precio: precio
         })
-
+        //response.log(pantalla, request.body.pantalla)//cualquiera de las dos fornmas en valido 
         response.status(200).send(devices)
     } else{
         response.status(406).send('error en los tipos de datos')
@@ -71,14 +71,14 @@ app.post('/device', (request, response) => {
 //endpoint para actualizar los dispositivos 
 app.put('/device/:index', (request, response) => {
     const index = parseInt(request.params.index);
-    if(typeof(index) === 'number'){
+    if (typeof(index) === 'number'){
         const {
             marca, 
             modelo, 
             pantalla,
             sistema_operativo, 
             precio
-        } = response.body;
+        } = request.body;
 
         if(
             typeof(marca) === 'string' &&
@@ -112,7 +112,8 @@ app.use('/device', (request, response) => {
 
 })
 
-//midleware para validar URLs inexistentes 
+//middleware para validar URLs inexistentes , en este caso va a ser una funcion intermedia que va hacer unas variaciones
+//si hay una url que no la encuentra retorna este mensaje 
 app.use((request, response, next) => {
     response.status(404).send('URL no encontrada ')
 })
